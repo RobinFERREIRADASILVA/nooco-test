@@ -39,7 +39,7 @@ const User = () => {
       <h2>Statistiques sur les utilisateurs</h2>
       <div className="user-first">
         <div className="user-description-first">
-          <p>Ce graphique représente le nombres de <strong>connexions</strong> et le nombre <strong>d'achat</strong> effectué pour chaque utilisateur dans le mois précédent.</p>
+          <p>Ce graphique représente le nombre de <strong>connexions</strong> et le nombre <strong>d'achats</strong> effectué pour chaque utilisateur dans le mois précédent.</p>
         </div>
         <div className="user-graph-first">
           <Bar
