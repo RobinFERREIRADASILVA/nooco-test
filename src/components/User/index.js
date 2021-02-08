@@ -1,7 +1,7 @@
 /* eslint-disable no-plusplus */
 /* eslint-disable max-len */
 import React from 'react';
-import { Bar } from 'react-chartjs-2';
+import { Bar, Doughnut } from 'react-chartjs-2';
 import { users, logClics } from 'src/data';
 
 // Import style
@@ -23,12 +23,23 @@ const User = () => {
     return counter;
   });
 
+  // Data for second graphic
+  const durationOnArticle = users.map((user) => {
+    let counter = 0;
+    const loopOnProduct = logClics.map((product) => {
+      if (user.id === product.idUser) {
+        counter += product.duration;
+      }
+    });
+    return counter;
+  });
+
   return (
     <div className="user">
       <h2>Statistiques sur les utilisateurs</h2>
       <div className="user-first">
-        <div className="user-description">
-          <p>Ce graphique représente le nombres de connexions pour chaque utilisateur dans le mois précédent.</p>
+        <div className="user-description-first">
+          <p>Ce graphique représente le nombres de <strong>connexions</strong> et le nombre <strong>d'achat</strong> effectué pour chaque utilisateur dans le mois précédent.</p>
         </div>
         <div className="user-graph-first">
           <Bar
@@ -58,15 +69,45 @@ const User = () => {
               ],
             }}
             height={450}
-            width={400}
+            width={900}
             options={{
               maintainAspectRatio: false,
             }}
           />
         </div>
       </div>
+      <div className="user-second">
+        <div className="user-graph-second">
+          <h3>Durée (en seconde) à consulter des articles</h3>
+          <Doughnut
+            data={{
+              labels: lastNames,
+              datasets: [
+                {
+                  data: durationOnArticle,
+                  backgroundColor: [
+                    'rgb(69, 220, 195, 0.5)',
+                    'rgba(158, 198, 190, 0.5)',
+                    'rgba(55, 64, 100, 0.5)',
+                    'rgba(63, 0, 208, 0.5)',
+                  ],
+                },
+              ],
+            }}
+            height={450}
+            width={600}
+            options={{
+              maintainAspectRatio: false,
+            }}
+          />
+
+        </div>
+        <div className="user-description-second">
+          <p>Ici, le graphique représente <strong>la durée</strong> qu'on passé les utilisateurs, ces chiffres sont calculé sur les mêmes clients que le graphique du dessus, sur les différents articles du site.</p>
+        </div>
+      </div>
     </div>
   );
-}
+};
 
 export default User;
