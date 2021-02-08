@@ -48,9 +48,9 @@ export const products = [
     article: 'Slim',
     price: 139,
   },
-]
+];
 
-export const user = [
+export const users = [
   {
     lastName: 'Martin',
     firstName: 'Gabriel',
