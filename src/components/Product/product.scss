@@ -1,8 +1,36 @@
 .product {
+  position: relative;
+  h2 {
+    font-size: 2em;
+    text-align: center;
+    margin: 3em;
+    color: #3f00d0;
+    font-weight: bold;
+    border-bottom: 1px solid #3f00d0;
+    padding-bottom: 1em;
+    width: 50%;
+    margin: auto;
+  }
   .product-first {
+    margin: 4em;
     .product-first-graph {
-      width: 60%;
+      width: 70%;
       margin: auto;
+    }
+    .product-infos {
+      background: #3f00d0;
+      font-size: 1.3em;
+      color: white;
+      padding: 2em;
+      width: 300px;
+      border-radius: 20px;
+      position: absolute;
+      top: 130px;
+      right: 100px;
+
+      .product-sales {
+        color: #45dcc3;
+      }
     }
   }
 }

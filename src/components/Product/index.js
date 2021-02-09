@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 /* eslint-disable no-plusplus */
 import React from 'react';
 import { Bar } from 'react-chartjs-2';
@@ -28,6 +29,9 @@ const Product = () => {
     <div className="product">
       <h2>Statistiques des produits</h2>
       <div className="product-first">
+        <div className="product-infos">
+          <p>On peut voir avec ce graphique le nombre de <span className="product-sales">ventes</span> sur les différents articles de votre boutique</p>
+        </div>
         <div className="product-first-graph">
           <Bar
             data={{
