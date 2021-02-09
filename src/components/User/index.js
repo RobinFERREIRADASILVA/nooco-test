@@ -97,7 +97,7 @@ const User = () => {
             height={450}
             width={600}
             options={{
-              maintainAspectRatio: false,
+              maintainAspectRatio: true,
             }}
           />
 

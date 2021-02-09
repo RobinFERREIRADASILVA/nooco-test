@@ -17,6 +17,7 @@
       border-radius: 0 20px 20px 0;
       display: flex;
       width: 35%;
+      max-height: 100%;
       p {
         align-self: center;
         padding: 3em;
@@ -24,10 +25,11 @@
     }
     .user-graph-second {
       width: 40%;
-      margin: 0 auto;
+      margin:auto;
     }
     .user-graph-first {
-      margin-left: 2.5em;
+      width: 57%;
+      margin: auto;
     }
     .user-description-second {
       background: rgba(158, 198, 190, 0.5);
