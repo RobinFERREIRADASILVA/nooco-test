@@ -12,16 +12,19 @@
   }
   .user-first, .user-second  {
     display: flex;
-    font-size: 1.2em;
+    font-size: 1.3em;
     text-align: center;
     line-height: 1.5em;
     margin: 4em 0;
     .user-description-first, .user-description-second {
-      background: rgb(69, 220, 195);
+      background: rgb(69, 220, 195, 0.8);
       border-radius: 0 20px 20px 0;
       display: flex;
       width: 35%;
       max-height: 100%;
+      .login, .purchase {
+        color: #3f00d0;
+      }
       p {
         align-self: center;
         padding: 3em;
@@ -36,7 +39,7 @@
       margin: auto;
     }
     .user-description-second {
-      background: rgba(158, 198, 190, 0.5);
+      background: rgba(158, 198, 190, 0.4);
       padding: 3em;
       border-radius: 20px 0px 0px 20px;
       width: 50%;

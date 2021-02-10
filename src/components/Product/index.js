@@ -30,7 +30,7 @@ const Product = () => {
       <h2>Statistiques des produits</h2>
       <div className="product-first">
         <div className="product-infos">
-          <p>On peut voir avec ce graphique le nombre de <span className="product-sales">ventes</span> sur les différents articles de votre boutique</p>
+          <p>On peut voir avec ce graphique le nombre de <span className="product-sales">ventes</span> sur les différents articles de votre boutique.</p>
         </div>
         <div className="product-first-graph">
           <Bar
@@ -41,14 +41,24 @@ const Product = () => {
                   label: 'Nombre de ventes',
                   data: numberOfSales,
                   backgroundColor: [
-                    'rgba(63, 0, 208, 0.5)',
-                    'rgba(158, 198, 190, 0.5)',
-                    'rgba(55, 64, 100, 0.5)',
-                    'rgba(145, 64, 100, 0.5)',
-                    'rgba(55, 75, 100, 0.5)',
-                    'rgba(55, 25, 100, 0.5)',
-                    'rgba(55, 158, 100, 0.5)',
+                    'rgba(63, 0, 208, 0.3)',
+                    'rgba(158, 198, 190, 0.3)',
+                    'rgba(55, 64, 100, 0.3)',
+                    'rgba(145, 64, 100, 0.3)',
+                    'rgba(55, 255, 100, 0.3)',
+                    'rgba(55, 25, 100, 0.3)',
+                    'rgba(55, 158, 100, 0.3)',
                   ],
+                  borderColor: [
+                    'rgba(63, 0, 208, 1)',
+                    'rgba(158, 198, 190, 1)',
+                    'rgba(55, 64, 100, 1)',
+                    'rgba(145, 64, 100, 1)',
+                    'rgba(55, 75, 100, 1)',
+                    'rgba(55, 25, 100, 1)',
+                    'rgba(55, 158, 100, 1)',
+                  ],
+                  borderWidth: 1,
                 },
               ],
             }}

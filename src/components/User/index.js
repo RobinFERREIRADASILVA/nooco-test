@@ -39,7 +39,7 @@ const User = () => {
       <h2>Statistiques sur les utilisateurs</h2>
       <div className="user-first">
         <div className="user-description-first">
-          <p>Ce graphique représente le nombre de <strong>connexions</strong> et le nombre <strong>d'achats</strong> effectué pour chaque utilisateur dans le mois précédent.</p>
+          <p>Ce graphique représente le nombre de <strong className="login">connexions</strong> et le nombre <strong className="purchase">d'achats</strong> effectué pour chaque utilisateur dans le mois précédent.</p>
         </div>
         <div className="user-graph-first">
           <Bar
@@ -50,21 +50,35 @@ const User = () => {
                   label: 'Nombres de connexions par mois',
                   data: loginByMonth,
                   backgroundColor: [
-                    'rgb(69, 220, 195, 0.5)',
-                    'rgba(158, 198, 190, 0.5)',
-                    'rgba(55, 64, 100, 0.5)',
-                    'rgba(63, 0, 208, 0.5)',
+                    'rgb(69, 220, 195, 0.7)',
+                    'rgba(158, 198, 190, 0.7)',
+                    'rgba(55, 64, 100, 0.7)',
+                    'rgba(63, 0, 208, 0.7)',
                   ],
+                  borderColor: [
+                    'rgb(69, 220, 195, 1)',
+                    'rgba(158, 198, 190, 1)',
+                    'rgba(55, 64, 100, 1)',
+                    'rgba(63, 0, 208, 1)',
+                  ],
+                  borderWidth: 2,
                 },
                 {
                   label: 'Nombres d\'achat effectué',
                   data: purchases,
                   backgroundColor: [
-                    'rgb(69, 220, 195, 0.5)',
-                    'rgba(158, 198, 190, 0.5)',
-                    'rgba(55, 64, 100, 0.5)',
-                    'rgba(63, 0, 208, 0.5)',
+                    'rgb(69, 220, 195, 0.3)',
+                    'rgba(158, 198, 190, 0.3)',
+                    'rgba(55, 64, 100, 0.3)',
+                    'rgba(63, 0, 208, 0.3)',
                   ],
+                  borderColor: [
+                    'rgb(69, 220, 195, 1)',
+                    'rgba(158, 198, 190, 1)',
+                    'rgba(55, 64, 100, 1)',
+                    'rgba(63, 0, 208, 1)',
+                  ],
+                  borderWidth: 1,
                 },
               ],
             }}
@@ -86,11 +100,18 @@ const User = () => {
                 {
                   data: durationOnArticle,
                   backgroundColor: [
-                    'rgb(69, 220, 195, 0.5)',
-                    'rgba(158, 198, 190, 0.5)',
-                    'rgba(55, 64, 100, 0.5)',
-                    'rgba(63, 0, 208, 0.5)',
+                    'rgb(69, 220, 195, 0.4)',
+                    'rgba(158, 198, 190, 0.4)',
+                    'rgba(55, 64, 100, 0.4)',
+                    'rgba(63, 0, 208, 0.4)',
                   ],
+                  borderColor: [
+                    'rgb(69, 220, 195, 1)',
+                    'rgba(158, 198, 190, 1)',
+                    'rgba(55, 64, 100, 1)',
+                    'rgba(63, 0, 208, 1)',
+                  ],
+                  borderWidth: 2,
                 },
               ],
             }}
@@ -103,7 +124,7 @@ const User = () => {
 
         </div>
         <div className="user-description-second">
-          <p>Ici, le graphique représente <strong>la durée</strong> qu'on passé les utilisateurs, ces chiffres sont calculé sur les mêmes clients que le graphique du dessus, sur les différents articles du site.</p>
+          <p>Ici, le graphique représente <strong className="duration">la durée</strong> qu'on passé les utilisateurs, ces chiffres sont calculé sur les mêmes clients que le graphique du dessus, sur les différents articles du site.</p>
         </div>
       </div>
     </div>
