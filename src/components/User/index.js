@@ -8,7 +8,7 @@ import { users, logClics } from 'src/data';
 import './user.scss';
 
 const User = () => {
-  // Datas for first graphic
+  // Data for first graphic
   const lastNames = users.map((user) => (user.lastName));
   const loginByMonth = users.map((user) => (user.numberOfConnexion));
   const purchases = users.map((user) => {
